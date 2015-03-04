@@ -333,7 +333,16 @@ console.log('------ conditionals ----------');
 
 
     //nested conditional statement
+    if ("a" === "a"){
 
+        if ("b"" === ""b"){
+            console.log("In Nested if-else / b === b: True");
+        }else{
+            //execute block of code if the matching "IF" statement
+        };
+    }else{
+        console.log("nested conditional: 1st IF returned false");
+    };
 
 
 /* ==============================================================
@@ -353,16 +362,28 @@ console.log('------ conditionals ----------');
  */
 
     //AND logical operator
-
+    if ( (1 === 1) && ("hi" === "hi") ){
+        console.log('&& logical operator: both sides = true');
+    }
 
     //OR logical operator
-
+    if ( (1 === 1) || ("hi" === "hi") ){
+        console.log('|| logical operator: one side = true');
+    };
 
     // ! NOT logical operator
-
+    if ( !(1 === 1) || ("hi" === "no") ){
+        console.log('! NOT logical operator: left is true converted to NOT');
+    }else{
+        console.log('! NOT logical operator: both sides = false');
+    };
 
     // all logical operators with order of operations
-
+    if (5 < 2 || (1 === 1 && ! (2 == "2" || 5 < 2))){
+        console.log('logical operator: true');
+    }else{
+        console.log('logical operator: false');
+    };
 
 
 /*******************************************
