@@ -142,23 +142,23 @@ console.log('------ numbers ----------');
 //    console.log("counter:", num);
 
     //add a number to a string is always a string
-    var myStr = "6" + 2;
-    console.log("Number + Strings:", myStr);
+//    var myStr = "6" + 2;
+//    console.log("Number + Strings:", myStr);
 
 
     //other math operations will result in a number
-    var myStr = "6" / 2;
-    console.log("Numer / Strings:", myStr);
+//    var myStr = "6" / 2;
+//    console.log("Numer / Strings:", myStr);
 
     //order of operations: ( ), *, /, +, -
-    var num = 4 + (6 * 5 - 10) / 5;
-    console.log("order of operations:", num);
+//    var num = 4 + (6 * 5 - 10) / 5;
+//    console.log("order of operations:", num);
 
 
     //modulo example
-    var num1 = 10;
-    var num2 = 3;
-    console.log("Remainder:", num1%num2);
+//    var num1 = 10;
+//    var num2 = 3;
+//    console.log("Remainder:", num1%num2);
 
 
 // arrays: (definition, indexing, getter/setter)
@@ -249,7 +249,8 @@ console.log('------ conditionals ----------');
         a true or false boolean
     - conditions can be used just about anywhere, not just in conditionals and loops
 */
-
+    var myVar = 5 > 3;
+    console.log("is 5 greater then 3:", myVar);
 
 
 /*
@@ -267,7 +268,10 @@ console.log('------ conditionals ----------');
          };
 */
 
-
+    if (5 > 3){
+        //execute code here.
+        console.log("'5 > 3:' True!");
+    };
 
 /*
     - a common mistake is to use the assignment operator  = instead of the ==
@@ -280,8 +284,21 @@ console.log('------ conditionals ----------');
 */
 
     // == performs a loose check of two values
+    if ("1" == 1){
+        console.log("'1' == 1, True");
+    };
 
+    if (1 == 1){
+        console.log("1 == 1, True");
+    };
 
+    if ("1" === 1){
+        console.log("'1' === 1, False");
+    };
+
+    if("1" !== 1){
+        console.log("'1' !== 1, True");
+    };
 
 /* ==============================================================
     if - else statements (allows only for one option)
@@ -295,10 +312,24 @@ console.log('------ conditionals ----------');
  ================================================================
  */
 
-
+    if ("a == b"){
+        //TRUE: run code
+        console.log("a is less than b");
+    }else{
+        //False: run code
+        console.log("if-else: the 'IF' statement is false");
+    };
 
     //if - else if - else (allows for multiple options)
-
+    if ("a" < "b"){
+        console.log("a is less than b");
+    }else if ("a" < "c"){
+        console.log("a is less than c");
+    }else if ("a" < "d"){
+        console.log("a is less than d");
+    }else{
+        console.log("if - else if: all others returned flase");
+    };
 
 
     //nested conditional statement
