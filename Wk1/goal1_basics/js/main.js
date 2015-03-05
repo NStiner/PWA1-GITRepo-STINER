@@ -186,7 +186,11 @@ console.log('------ arrays ----------');
  */
 
     //arrays can hold any data type
-
+    console.log("index 0: ", myArr[0]);
+    console.log("index 1: ", myArr[1]);
+    console.log("index 2: ", myArr[2]);
+    console.log("index 3: ", myArr[3]);
+    console.log("index 4: ", myArr[4]);
 
 
  /*******************************************
@@ -198,7 +202,9 @@ console.log('------ arrays ----------');
 
  ********************************************/
 
-
+    var array1 = [10,50,100,200];
+    console.log("index 1 is: ", array1[1]);
+    console.log("the sum of all numbers: ", array1[0] + array1[1] + array1[2]+ array1[3]);
 
 /*******************************************
 
@@ -215,6 +221,12 @@ console.log('------ arrays ----------');
 
  ********************************************/
 
+    var myArray = new Array();
+    myArray[0] = "baseball";
+    myArray[1] = "football";
+    myArray[2] = "basketball";
+
+    console.log(myArray[0] + ',' + myArray[1] + ',' + myArray[2]);
 
  // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
 console.log('------ conditionals ----------');
