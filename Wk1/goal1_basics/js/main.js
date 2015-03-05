@@ -535,7 +535,18 @@ console.log('------Functions ----------');
      - type the below as an example
         functionName();
  *****************************
+*/
 
+    var my ctr = 1;
+
+    var myCounter = function(){
+        var testVar = 0;
+        myctr++;
+        console.log('counter = ', myctr);
+    };
+
+    myCounter();
+    myCounter();
 
 
 
@@ -574,7 +585,14 @@ console.log('------Functions ----------');
     - items inside our function we call on these variables.. such as:
  */
 
+        var value1 = 1;
+        var value2 = 2;
 
+        var myFn = function(var1, var2) {
+            console.log('function number: ', var1 + var2 );
+        };
+
+        myFn(value1, value2);
 
 
 /*******************************************
