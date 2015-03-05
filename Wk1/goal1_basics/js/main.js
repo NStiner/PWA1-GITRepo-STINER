@@ -606,7 +606,16 @@ console.log('------Functions ----------');
      5.  second time: pass a 2 into the funciton as an argument
      6.  console.log the results
  ********************************************/
+    var myctr = 1;
 
+    var myCounter = function(newct){
+            var myctr = 50;
+            myctr += newct;
+            console.log('counter =', myctr);
+    };
+
+    myCounter(5);
+    myCounter(2);
 
 
 
@@ -619,7 +628,12 @@ console.log('------Functions ----------');
         type) back to the point of call (referred to as a method)
     - the called function should be assigned to a variable (i.e name - see below)
  ********************************************/
+    var myFn = function(){
+        return 'jamesBond';
+    };
 
+    var name = myFn();
+    console.log('name: ', name);
 
 
     // if a return gives back no value, it instead returns “undefined”
