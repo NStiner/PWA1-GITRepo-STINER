@@ -14,8 +14,8 @@
     var playerTwoName = "Kratos";
 
     //player damage
-    var playerOneDamage = "20";
-    var playerTwoDamage = "20";
+    var playerOneDamage = 20;
+    var playerTwoDamage = 20;
 
     //player health
     var playerOneHealth = 100;
@@ -25,10 +25,21 @@
     var round =1;
 
     //functions
-    function fight(){};
+    function fight(){
+        console.log('in the fight function');
 
-    function winnerCheck(){};
+        for (var i=0; i<10; i++){
+            console.log(i);
+        };
+        /*winnerCheck()*/
+    };
 
+    function winnerCheck(){
+        //code will go here
+    };
+
+/**** The program gets started below ****/
+    console.log('program starts');
     fight();
 
 
