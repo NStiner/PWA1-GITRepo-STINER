@@ -23,4 +23,13 @@
 
     //round
     var round =1;
+
+    //functions
+    function fight(){};
+
+    function winnerCheck(){};
+
+    fight();
+
+
 })();
