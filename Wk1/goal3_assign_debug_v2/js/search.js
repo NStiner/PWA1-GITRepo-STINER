@@ -4,22 +4,20 @@ PSEUDOCODE:
 	
 */
 
-
-
-
-
-
-
 // Create privatized scope using a self-executing function
 (function(){
 	
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
+		//**Creates var resultsDIV and sets it to doc.get
+		//**Creates var searchInput and sets it to doc.forms
+		//**creates variable for current search
 	var resultsDIV = document.getElementById("results"),
 		searchInput = document.forms[0].search,
 		currentSearch = ''
 	;
 	
 	// Validates search query
+		//**Creates var validqte and sets function to call query
 	var validqte == function(query){
 		
 		// Trim whitespace from start and end of search query
@@ -31,6 +29,7 @@ PSEUDOCODE:
 		;
 		
 		// Check search length, must have 3 characters
+			//*if length is smaller than 3, you will be alerted
 		if(query.length < 3){
 			alert("Your search query is too small, try again.);
 			
@@ -43,24 +42,31 @@ PSEUDOCODE:
 	};
 	
 	// Finds search matches
+		//**creates var search and sets it to function call 
 	var search = function(query)
 		
 		// split the user's search query string into an array
+			//**Create var queryArray and set it to query.join
 		var queryArray = query.join(" ");
 		
 		// array to store matched results from database.js
+			//**creates var results and stores data in array
 		var results = [];
 
 		// loop through each index of db array
+			//**creates a for loop and sets variables
 		for(var i=0, j=db.length; i<j; i++){
 		
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
+				//** create var dbTitleEnd and set index
+				//** create var dbitem and substring
 			var dbTitleEnd = db[i].indexOf('|');
 			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
 			
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
+				//** creates for loop and sets variable
 			for(var ii=0, jj=queryArray.length; ii<jj; ii++){
 				var qitem = queryArray[ii].tolowercase();
 				
@@ -93,6 +99,7 @@ PSEUDOCODE:
 	};
 	
 	// Put matches into page as paragraphs with anchors
+		//** creates var showMatches equals to function results and prints out results
 	var showMatches = function(results){
 		
 		// THE NEXT 4 LINES ARE CORRECT.
@@ -102,6 +109,7 @@ PSEUDOCODE:
 		;
 		
 		// loop through all the results search() function
+			//** creates for loop and sets variable
 		for(var i=0, j=results.length; i<j; i++){
 		
 			// title of video ends with pipe
