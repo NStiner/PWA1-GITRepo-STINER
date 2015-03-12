@@ -63,8 +63,8 @@ PSEUDOCODE:
     console.log("FIGHT!!!");
 
     //Using Arrays
-    var fighter1 = ["Kabal", 20, 100];
-    var fighter2 = ["Kratos", 20, 100];
+    var player1 = ["Kabal", 20, 100];
+    var player2 = ["Kratos", 20, 100];
 
     //player names
 //    var playerOneName = "Kabal";
@@ -83,26 +83,26 @@ PSEUDOCODE:
 
     //functions
     function fight(){
-        alert(playerOneName + ":" + " " + playerOneHealth + " " + "*START*" + " " + playerTwoName + ":" + " " + playerTwoHealth);
+        alert(player1[0] + ":" + " " + player1[2] + " " + "*START*" + " " + player2[0] + ":" + " " + player2[2]);
 
         for (var i=0; i<10; i++) {
-            var minDamage1 = playerOneDamage * .5;
-            var minDamage2 = playerTwoDamage * .5;
-            var f1 = Math.floor(Math.random() * (playerOneDamage - minDamage1) + minDamage1);
-            var f2 = Math.floor(Math.random() * (playerTwoDamage - minDamage2) + minDamage2);
+            var minDamage1 = player1[1] * .5;
+            var minDamage2 = player2[1] * .5;
+            var f1 = Math.floor(Math.random() * (player1[1] - minDamage1) + minDamage1);
+            var f2 = Math.floor(Math.random() * (player1[1] - minDamage2) + minDamage2);
 
             //inflicting damage
-            playerOneHealth -= f1;
-            playerTwoHealth -= f2;
+            player1[2] -= f1;
+            player2[2] -= f2;
 
-            console.log(playerOneName + ":" + " " + playerOneHealth + " " + " " + playerTwoName + ":" + " " + playerTwoHealth);
+            console.log(player1[0] + ":" + " " + player1[2] + " " + " " + player2[0] + ":" + " " + player2[2]);
 
             var results = winnerCheck();
             console.log(results);
 
             if (results === "no winner") {
                 round++;
-                alert(playerOneName + ":" + " " + playerOneHealth + " " + "*ROUND" + " " + round + " " + "OVER*" + " " + playerTwoName + ":" + " " + playerTwoHealth);
+                alert(player1[0] + ":" + " " + player1[2] + " " + "*ROUND" + " " + round + " " + "OVER*" + " " + player2[0] + ":" + " " + player2[2]);
             } else {
                 alert(results);
                 break;
@@ -114,12 +114,12 @@ PSEUDOCODE:
         console.log("in winnerCheck FN");
         var result = "no winner";
 
-        if(playerOneHealth < 1 && playerTwoHealth < 1){
+        if(player1[2] < 1 && player2[2] < 1){
             result = "You both die"
-        }else if(playerOneHealth < 1){
-            result = playerTwoName + " " + "WINS!!!"
-        }else if(playerTwoHealth < 1){
-            result = playerOneName + " " + "WINS!!!"
+        }else if(player1[2] < 1){
+            result = player2[0] + " " + "WINS!!!"
+        }else if(player2[2] < 1){
+            result = player1[0] + " " + "WINS!!!"
         };
         return result;
     };
