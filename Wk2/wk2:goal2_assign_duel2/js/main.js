@@ -1,7 +1,7 @@
 /*
  Nicole Stiner
- 03/05/15
- Assignment: Duel 1
+ 03/11/15
+ Assignment: Develop Duel 2
  */
 
 /*** Pseudocode ***/
@@ -62,17 +62,21 @@ PSEUDOCODE:
 
     console.log("FIGHT!!!");
 
+    //Using Arrays
+    var fighter1 = ["Kabal", 20, 100];
+    var fighter2 = ["Kratos", 20, 100];
+
     //player names
-    var playerOneName = "Kabal";
-    var playerTwoName = "Kratos";
+//    var playerOneName = "Kabal";
+//    var playerTwoName = "Kratos";
 
     //player damage
-    var playerOneDamage = 20;
-    var playerTwoDamage = 20;
+//    var playerOneDamage = 20;
+//    var playerTwoDamage = 20;
 
     //player health
-    var playerOneHealth = 100;
-    var playerTwoHealth = 100;
+//    var playerOneHealth = 100;
+//    var playerTwoHealth = 100;
 
     //round
     var round = 0;
