@@ -7,5 +7,15 @@
  */
 (function(){
 
+    //make person global so main can see it
+    window.Person=Person;
+
+    //adds all of the jobs and actions to the person
+    Person.jobs = ["Doctor","Fireman","Student","Teacher"];
+    Person.actions = ["Sleeping","Working","Eating"];
+
+
+
+
 })();
 
