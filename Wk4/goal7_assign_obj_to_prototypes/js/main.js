@@ -29,5 +29,23 @@
         names.splice(personIndex,1);
     }
 
+    clearInterval(interval);
+
+    //set interval to change every 30 seconds
+    interval=setInterval(runUpdate,1000 / 30);
+
+    function populateHTML(data,field){
+        var id=document.getElementById(field);
+        id.innerHTML = data;
+    }
+
+    function runUpdate(){
+        people.forEach(function(element){
+            element.update();
+        });
+    }
+
+
+
 
 })();
