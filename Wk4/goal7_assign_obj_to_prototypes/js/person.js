@@ -14,6 +14,26 @@
     Person.jobs = ["Doctor","Fireman","Student","Teacher"];
     Person.actions = ["Sleeping","Working","Eating"];
 
+    function Person(name,row){
+
+        console.log("Person Created: ", name);
+
+        this.name = name;
+
+        //randomly selects 3 out of 5 names
+        this.action = Person.actions[Math.floor(Math.random()*Person.actions.length)];
+
+        //randomly sets job
+        this.job = Person.jobs[Math.floor(Math.random()*Person.jobs.length)];
+
+        //defines the row
+        this.row = row;
+
+        //display first action given
+        var id = document.getElementById("r"+this.row+"c3");
+        id.innerHTML=this.action;
+    }
+
 
 
 
