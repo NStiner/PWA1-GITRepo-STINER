@@ -34,7 +34,16 @@
         id.innerHTML=this.action;
     }
 
-
+    //cycle through actions every couple seconds
+    Person.prototype.update = function(){
+        if(Math.floor(Math.random() <.01)){
+            var i = Math.floor(Math.random()*Person.actions.length);
+            this.action = Person.actions[i];
+            var id = document.getElementById("r"+this.row+"c3");
+            //use inner html to display the random action
+            id.innerHTML=this.action;
+        }
+    }
 
 
 })();
