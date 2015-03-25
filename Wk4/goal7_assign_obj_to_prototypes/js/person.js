@@ -5,3 +5,7 @@
  * Class: PWA
  * Goal: Goal7
  */
+(function(){
+
+})();
+
